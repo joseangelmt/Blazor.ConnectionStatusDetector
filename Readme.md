@@ -1,9 +1,16 @@
+[![NuGet](https://img.shields.io/nuget/v/Blazor.ConnectionStatusDetector?style=flat)](https://www.nuget.org/packages/Blazor.ConnectionStatusDetector/)
 # Blazor.ConnectionStatusDetector
 
 This package provides the *ConnectionStatusDetectorService* that provides the *ConnectionStatusChanged* event that notifies changes in the connection status on the client side.
 Apart from the event, the service has the property *IsOnline* to query the connection status.
 
 In addition, the *Connection* component is provided which renders different fragments depending on the connection status.
+
+Add the package to your project:
+
+```powershell
+dotnet add package Blazor.ConnectionStatusDetector --version 1.0.0
+```
 
 To use it, link to *connection.js* in your *index.html* file:
 
