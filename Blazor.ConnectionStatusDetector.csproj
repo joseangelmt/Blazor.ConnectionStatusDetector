@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>A Blazor service to detect (in client side) changes in connection status (online, offline) and a component to render fragments based on connection status </Title>
+    <Description>This package provides the ConnectionStatusDetectorService that provides the ConnectionStatusChanged event that notifies changes in the connection status on the client side.
+Apart from the event, the service has a property to query the connection status.
+
+In addition, the Connection component is provided which renders different fragments depending on the connection status.</Description>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageIcon>Blazor.png</PackageIcon>
+    <RepositoryUrl>https://github.com/joseangelmt/Blazor.ConnectionStatusDetector.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>blazor;component;service;connection;status</PackageTags>
+    <PackageReleaseNotes>First version</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Desktop\Blazor.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\..\..\..\Desktop\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="wwwroot\connection.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

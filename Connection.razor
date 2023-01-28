@@ -1,0 +1,22 @@
+﻿@inject IConnectionStatusDetectorService ConnectionStatus
+@implements IDisposable
+
+@if (ConnectionStatus.IsOnline)
+{
+    @Online
+}
+else
+{
+    @Offline
+}
+
+@code {
+    [Parameter]
+    public RenderFragment Online { get; set; }
+
+    [Parameter]
+    public RenderFragment Offline { get; set; }
+
+    protected override void OnInitialized() => ConnectionStatus.ConnectionStatusChanged += (_, _) => StateHasChanged();
+    public void Dispose() => ConnectionStatus.ConnectionStatusChanged -= (_, _) => StateHasChanged();
+}
