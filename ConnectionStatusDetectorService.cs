@@ -24,13 +24,10 @@ public class ConnectionStatusDetectorService : IConnectionStatusDetectorService,
     [JSInvokable("Connection.StatusChanged")]
     public void OnConnectionStatusChanged(bool isOnline)
     {
-        IsOnline = isOnline;
-        
         if (IsOnline != isOnline)
         {
             IsOnline = isOnline;
+            ConnectionStatusChanged?.Invoke(this, isOnline);
         }
-
-        ConnectionStatusChanged?.Invoke(this, isOnline);
     }
 }
