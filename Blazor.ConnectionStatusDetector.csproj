@@ -17,17 +17,11 @@ In addition, the Connection component is provided which renders different fragme
     <PackageTags>blazor;component;service;connection;status</PackageTags>
     <PackageReleaseNotes>First version</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>$(VersionPrefix)1.0.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\..\Desktop\Blazor.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\..\..\..\..\Desktop\LICENSE.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
     <None Include="wwwroot\connection.js" />
   </ItemGroup>
 
@@ -41,6 +35,14 @@ In addition, the Connection component is provided which renders different fragme
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Blazor.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="Readme.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
